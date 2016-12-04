@@ -15,6 +15,7 @@ phonefield = "5555555555"
 addressfield = "1600 Pennsylvania Avenue NW"
 zipfield = "20500"
 statefield = "DC"
+country = "DE"
 cctypefield = "master"  # "master" "visa" "american_express"
 ccnumfield = "5274576954806318"  # Randomly Generated Data (aka, this isn't mine)
 ccmonthfield = "06"  # Randomly Generated Data (aka, this isn't mine)
@@ -65,6 +66,7 @@ def buyprd(u):
     browser.fill("order[billing_address]", addressfield)
     browser.fill("order[billing_zip]", zipfield)
     browser.select("order[billing_state]", statefield)
+    browser.select("order[billing_country], country)
     print("Filling Out Credit Card Info")
 
     browser.select("credit_card[type]", cctypefield)
